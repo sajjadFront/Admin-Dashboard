@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <!-- css files link -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    
+    <div class="container">
+        <!-- brand name -->
+        
+        <!-- navigation -->
+        <div class="navigation">
+            <!-- <div class="fas fa-close"></div> -->
+            <div class="brand-name">
+                <a href="#">
+                    <span class="icon"><i class="fab fa-apple"></i></span>
+                    <span class="title">brand name</span>
+                </a>
+            </div>
+            <ul>
+                <li>
+                    <a href="#">
+                    <b></b>
+                    <b></b>
+                        <span class="icon"><i class="fas fa-home"></i></span>
+                        <span class="title">dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                    <b></b>
+                    <b></b>
+                        <span class="icon"><i class="fas fa-user"></i></span>
+                        <span class="title">customer</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <b></b>
+                        <b></b>
+                        <span class="icon"><i class="fas fa-comments"></i></span>
+                        <span class="title">massages</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <b></b>
+                        <b></b>
+                        <span class="icon"><i class="fas fa-question"></i></span>
+                        <span class="title">help</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <b></b>
+                        <b></b>
+                        <span class="icon"><i class="fas fa-cog"></i></span>
+                        <span class="title">settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <b></b>
+                        <b></b>
+                        <span class="icon"><i class="fas fa-lock"></i></span>
+                        <span class="title">password</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <b></b>
+                        <b></b>
+                        <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+                        <span class="title">sign out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- main -->
+        <div class="main">
+            <!-- navbar -->
+            <div class="navbar">
+                <div class="nav-left">
+                    <div class="fas fa-bars"></div>
+                    <div class="search-form-container">
+                        <div class="fas fa-close"></div>
+                        <form action="" class="search-form">
+                            <label for="search">
+                                <div class="fas fa-search"></div>
+                            </label>
+                            <input type="search" name="" id="search" placeholder="Search here">
+                        </form>
+                    </div>
+                </div>
+                <div class="nav-right">
+                    <div class="icons">
+                        <div class="fas fa-search"></div>
+                        <div class="fas fa-bell">
+                            <div class="alarm"></div>
+                        </div>
+                    </div>
+                    <div class="user-profile">
+                        <div class="img-profile">
+                            <img src="images/user.jpg" alt="">
+                        </div>
+                        <div class="fas fa-angle-down"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card box -->
+            <div class="card-box">
+                <!-- card 1 -->
+                <div class="card">
+                    <div class="iconBox">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="info-number">
+                        <h3>1205</h3>
+                        <p>daily views</p>
+                    </div>
+                </div>
+                <!-- card 2 -->
+                <div class="card">
+                    <div class="iconBox">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="info-number">
+                        <h3>94</h3>
+                        <p>sales</p>
+                    </div>
+                </div>
+                <!-- card 3 -->
+                <div class="card">
+                    <div class="iconBox">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="info-number">
+                        <h3>176</h3>
+                        <p>comments</p>
+                    </div>
+                </div>
+                <!-- card 4 -->
+                <div class="card">
+                    <div class="iconBox">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <div class="info-number">
+                        <h3>850$</h3>
+                        <p>earning</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Details -->
+            <section class="details">
+                <!-- Recent Orders -->
+                <div class="recent-orders">
+                    <div class="heading">
+                        <h2>recent orders</h2>
+                        <a href="#">view all</a>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Name</td>
+                                <td>Price</td>
+                                <td>Payment</td>
+                                <td>Status</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Star Refrigerator</td>
+                                <td>$1200</td>
+                                <td>Paid</td>
+                                <td><span class="status delivered">Delivered</span></td>
+                            </tr>
+                            <tr>
+                                <td>Window Coolers</td>
+                                <td>$110</td>
+                                <td>Paid</td>
+                                <td><span class="status pending">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>Speakers</td>
+                                <td>$620</td>
+                                <td>Paid</td>
+                                <td><span class="status return">Return</span></td>
+                            </tr>
+                            <tr>
+                                <td>Hp Laptop</td>
+                                <td>$110</td>
+                                <td>Due</td>
+                                <td><span class="status inprogress">In Progress</span></td>
+                            </tr>
+                            <tr>
+                                <td>Apple Watch</td>
+                                <td>$1200</td>
+                                <td>Paid</td>
+                                <td><span class="status delivered">Delivered</span></td>
+                            </tr>
+                            <tr>
+                                <td>Wall Fan</td>
+                                <td>$110</td>
+                                <td>Paid</td>
+                                <td><span class="status pending">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>Adidas Shoes</td>
+                                <td>$620</td>
+                                <td>Paid</td>
+                                <td><span class="status return">Return</span></td>
+                            </tr>
+                            <tr>
+                                <td>Denim Shirts</td>
+                                <td>$110</td>
+                                <td>Due</td>
+                                <td><span class="status inprogress">In Progress</span></td>
+                            </tr>
+                            <tr>
+                                <td>Casual Shoes</td>
+                                <td>$575</td>
+                                <td>Paid</td>
+                                <td><span class="status pending">Pending</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Recent Customers -->
+                <div class="recent-customers">
+                    <div class="heading">
+                        <h2>recent customers</h2>
+                    </div>
+                    <table>
+                        <tr>
+                            <td><div class="imgBox"><img src="images/img1.jpg" alt=""></div></td>
+                            <td><h4>David<br><span>Italy</span></h4></td>
+                        </tr>
+                        <tr>
+                            <td><div class="imgBox"><img src="images/img2.jpg" alt=""></div></td>
+                            <td><h4>Muhammad<br><span>India</span></h4></td>
+                        </tr>
+                        <tr>
+                            <td><div class="imgBox"><img src="images/img3.jpg" alt=""></div></td>
+                            <td><h4>Amelia<br><span>France</span></h4></td>
+                        </tr>
+                        <tr>
+                            <td><div class="imgBox"><img src="images/img4.jpg" alt=""></div></td>
+                            <td><h4>Olivia<br><span>USA</span></h4></td>
+                        </tr>
+                        <tr>
+                            <td><div class="imgBox"><img src="images/img5.jpg" alt=""></div></td>
+                            <td><h4>Ashraf<br><span>India</span></h4></td>
+                        </tr>
+                        <tr>
+                            <td><div class="imgBox"><img src="images/img6.jpg" alt=""></div></td>
+                            <td><h4>Amit<br><span>Japan</span></h4></td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- css file link -->
+    <script src="js/script.js"></script>
+</body>
+</html>

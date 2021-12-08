@@ -1,0 +1,451 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+}
+:root{
+    --main-color: #0F296D;
+    --container-color: #F3F5FB;
+    --bg-color: #FFFFFF;
+    --text-color1: #393D54;
+    --text-color2: #CCCCCC;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    min-height: 100vh;
+    background: var(--container-color);
+}
+.container{
+    width: 100%;
+    position: relative;
+    transition: 0.5s;
+}
+.navigation{
+    position: fixed;
+    width: 28rem;
+    height: 100%;
+    background: var(--main-color);
+    transition: 0.5s;
+}
+.navigation.active{
+    transform: translateX(-100%);
+}
+.navigation .brand-name{
+    width: 100%;
+    text-align: center;
+    margin: 2rem 0 5rem;
+}
+.navigation .brand-name a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    color: #fff;
+}
+.navigation .brand-name a .icon{
+    font-size: 4rem;
+}
+.navigation .brand-name a .title{
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+.navigation ul{
+    list-style: none;
+    width: 100%;
+    padding-left: 3.5rem;
+}
+.navigation ul li{
+    width: 100%;
+    border-top-left-radius: 4rem;
+    border-bottom-left-radius: 4rem;
+}
+.navigation ul li a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1.6rem 3rem;
+    border-top-left-radius: 4rem;
+    border-bottom-left-radius: 4rem;
+    color: #fff;
+    position: relative;
+}
+.navigation ul li a.hovered,
+.navigation ul li a:hover{
+    background: var(--container-color);
+    color: var(--main-color);
+}
+.navigation ul li a.hovered b:nth-child(1),
+.navigation ul li a:hover b:nth-child(1){
+    width: 3rem;
+    height: 3rem;
+    background: var(--container-color);
+    position: absolute;
+    top: -3rem;
+    right: 0;
+}
+.navigation ul li a.hovered b:nth-child(2),
+.navigation ul li a:hover b:nth-child(2){
+    width: 3rem;
+    height: 3rem;
+    background: var(--container-color);
+    position: absolute;
+    bottom: -3rem;
+    right: 0;
+}
+.navigation ul li a.hovered b:nth-child(1)::before,
+.navigation ul li a:hover b:nth-child(1)::before{
+    content: '';
+    width: 3rem;
+    height: 3rem;
+    background: var(--main-color);
+    position: absolute;
+    border-bottom-right-radius: 100%;
+}
+.navigation ul li a.hovered b:nth-child(2)::before,
+.navigation ul li a:hover b:nth-child(2)::before{
+    content: '';
+    width: 3rem;
+    height: 3rem;
+    background: var(--main-color);
+    position: absolute;
+    border-top-right-radius: 100%;
+}
+.navigation ul li a .icon{
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    margin-right: 1.4rem;
+    font-size: 2.5rem;
+}
+.navigation ul li a .title{
+    font-size: 1.5rem;
+}
+/* main */
+.main{
+    position: relative;
+    left: 28rem;
+    width: calc(100% - 28rem);
+    padding: 0 3rem;
+    transition: 0.5s;
+}
+.main.active{
+    width: 100%;
+    left: 0;
+}
+/* navbar */
+.main .navbar{
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    background: var(--bg-color);
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    padding: 1.2rem 3rem;
+    box-shadow: 0 7px 25px rgb(0, 0, 0, 0.08);
+}
+.navbar .nav-left{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+}
+.navbar .nav-left .fa-bars{
+    font-size: 2.5rem;
+    color: var(--text-color2);
+    cursor: pointer;
+}
+.navbar .nav-left .fa-bars:hover{
+    color: #777;
+}
+.navbar .nav-left .search-form-container{
+    width: 35rem;
+    height: 4rem;
+    position: relative;
+    transition: 0.4s;
+}
+.search-form-container .fa-close{
+    font-size: 3.5rem;
+    position: absolute;
+    top: 1.5rem;
+    right: 2.5rem;
+    cursor: pointer;
+    color: #666;
+    z-index: 1001;
+    display: none;
+}
+.navbar .nav-left .search-form{
+    width: 100%;
+    height: 100%;
+    border-radius: 0.8rem;
+    position: relative;
+}
+.navbar .nav-left .search-form input{
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--text-color2);
+    border-radius: 1rem;
+    padding: 1.6rem 4rem;
+    padding-right: 0.5rem;
+    text-transform: none;
+    font-size: 1.5rem;
+}
+.navbar .nav-left .search-form input::placeholder{
+    color: #bbb;
+}
+.navbar .nav-left .search-form .fa-search{
+    position: absolute;
+    top: 1.2rem;
+    left: 1.2rem;
+    font-size: 1.6rem;
+    color: var(--text-color2);
+    cursor: pointer;
+}
+.navbar .nav-left .search-form .fa-search:hover{
+    color: #777;
+}
+.navbar .nav-right{
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 1rem;
+}
+.nav-right .icons{
+    width: 6rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    font-size: 2rem;
+    color: var(--text-color2);
+    transition: 0.5s;
+}
+.nav-right .icons .fas{
+    position: relative;
+    cursor: pointer;
+}
+.nav-right .icons .fas:hover{
+    color: #777;
+}
+.nav-right .icons .fa-search{
+    display: none;
+}
+.nav-right .icons .fa-bell .alarm{
+    width: 0.8rem;
+    height: 0.8rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--main-color);
+    border-radius: 100%;
+    border: 2px solid #fff;
+}
+.nav-right .user-profile{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+}
+.nav-right .user-profile .img-profile{
+    width: 3.5rem;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.nav-right .user-profile .img-profile img{
+    width: 100%;
+    border-radius: 0.8rem;
+}
+.nav-right .user-profile .fas{
+    font-size: 1.5rem;
+    color: var(--text-color2);
+}
+.nav-right .user-profile:hover .fas{
+    color: #777;
+}
+/* card-box */
+.card-box{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+}
+.card-box .card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg-color);
+    padding: 2.5rem;
+    border-radius: 2rem;
+    box-shadow: 0 7px 25px rgb(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 1000;
+}
+.card-box .card:hover{
+    transform: translateY(-0.8rem);
+}
+.card .iconBox{
+    background: var(--main-color);
+    color: #fff;
+    font-size: 4.5rem;
+    padding: 1.8rem 2.2rem;
+    border-radius: 2rem;
+}
+.card-box .card:nth-child(3) .iconBox{
+    padding: 1.8rem 2rem;
+}
+.card-box .card:nth-child(4) .iconBox{
+    padding: 1.8rem 2.5rem;
+}
+.card-box .card .info-number h3{
+    font-size: 3.2rem;
+    font-weight: 800;
+}
+.card-box .card .info-number p{
+    font-size: 1.6rem;
+    color: #bbb;
+}
+/* details */
+.details{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+.details .recent-orders,
+.details .recent-customers{
+    width: 100%;
+    background: var(--bg-color);
+    padding: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-radius: 2rem;
+    box-shadow: 0 7px 25px rgb(0, 0, 0, 0.08);
+}
+.recent-orders .heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+.details .heading h2{
+    font-size: 2.5rem;
+    color: var(--main-color);
+}
+.details .heading a{
+    font-size: 1.6rem;
+    background: var(--main-color);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.6rem;
+}
+.recent-orders table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.recent-orders table tr:hover{
+    background: var(--main-color);
+    color: #fff;
+}
+.recent-orders table thead tr{
+    pointer-events: none;
+}
+.recent-orders table tbody tr{ 
+    border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+.recent-orders table tbody tr:last-child{ 
+    border-bottom: none;
+}
+.recent-orders table thead tr td{
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+.recent-orders table tr td{
+    font-size: 1.6rem;
+    padding: 1rem;
+}
+.recent-orders table tr td:nth-child(1){
+    border-top-left-radius: 0.6rem;
+    border-bottom-left-radius: 0.6rem;
+}
+.recent-orders table tr td:nth-child(2){
+    text-align: right;
+}
+.recent-orders table tr td:nth-child(3){
+    text-align: center;
+}
+.recent-orders table tr td:nth-child(4){
+    text-align: right;
+    border-top-right-radius: 0.6rem;
+    border-bottom-right-radius: 0.6rem;
+}
+.status.delivered,
+.status.pending,
+.status.return,
+.status.inprogress{
+    color: #fff;
+    padding: 0.2rem 0.8rem;
+    border-radius: 0.4rem;
+}
+.status.delivered{
+    background: #F1554C;
+}
+.status.pending{
+    background: #f9ca3f;
+}
+.status.return{
+    background: #FFA5A0;
+}
+.status.inprogress{
+    background: #4675ee;
+    white-space: nowrap;
+}
+/* recent customers */
+.recent-customers{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.recent-customers table tr{
+    width: 100%;
+    border-collapse: collapse;
+    display: flex;
+    align-items: center;
+    padding: 1.15rem;
+    border-radius: 0.8rem;
+    transition: 0.3s;
+    cursor: pointer;
+
+}
+.recent-customers table tr:hover{
+    padding-left: 2.5rem;
+    background: #eee;
+}
+.recent-customers table tr td:first-child{
+    width: 4rem;
+    margin-right: 1.5rem;
+}
+.recent-customers table tr td .imgBox{
+    width: 100%;
+}
+.recent-customers table tr td .imgBox img{
+    width: 100%;
+    border-radius: 1rem;
+}
+.recent-customers table tr td h4{
+    font-size: 1.6rem;
+}
+.recent-customers table tr td h4 span{
+    font-size: 1.4rem;
+    color: #aaa;
+}
